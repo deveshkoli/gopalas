@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bill Splitter</title>
+  <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Bill Splitter</h1>
+
+    <div id="step1">
+      <h2>Step 1: Enter Participants</h2>
+      <input type="number" id="numPeople" placeholder="Number of people" />
+      <button onclick="createNameInputs()">Next</button>
+      <div id="nameInputs"></div>
+    </div>
+
+    <div id="step2" class="hidden">
+      <h2>Step 2: Enter Items</h2>
+      <input type="text" id="itemName" placeholder="Item name" />
+      <input type="number" id="itemPrice" placeholder="Item base price" />
+      <button onclick="addItem()">Add Item</button>
+      <div id="itemList"></div>
+      <button onclick="proceedToConsumption()">Next</button>
+    </div>
+
+    <div id="step3" class="hidden">
+      <h2>Step 3: Who Had What</h2>
+      <div id="consumptionInputs"></div>
+      <button onclick="proceedToAdjustments()">Next</button>
+    </div>
+
+    <div id="step4" class="hidden">
+      <h2>Step 4: Discounts and Taxes</h2>
+      <input type="number" id="discount" placeholder="Discount amount (₹)" />
+      <input type="number" id="cgst" placeholder="CGST (%)" />
+      <input type="number" id="sgst" placeholder="SGST (%)" />
+      <input type="number" id="service" placeholder="Service Charge (%)" />
+      <button onclick="calculateSplit()">Calculate</button>
+    </div>
+
+    <div id="result" class="hidden">
+      <h2>Result</h2>
+      <div id="splitResult"></div>
+    </div>
+  </div>
+
+</body>
+</html>
