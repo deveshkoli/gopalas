@@ -114,6 +114,10 @@ function calculateSplit() {
     p.innerText = `${person} owes ₹${finalTotals[person]}`;
     resultDiv.appendChild(p);
   }
+    // Add Grand Total after the split
+  const grandTotalP = document.createElement("p");
+  grandTotalP.innerHTML = `<strong>Grand Total (after split & adjustments): ₹${grandTotal.toFixed(2)}</strong>`;
+  resultDiv.appendChild(grandTotalP);
 
   document.getElementById("step4").classList.add("hidden");
   document.getElementById("result").classList.remove("hidden");
